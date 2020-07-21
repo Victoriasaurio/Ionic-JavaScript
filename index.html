@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ionic app</title>
+    <!--STYLE COMPONENTS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</head>
+    <body>
+
+        <ion-app> <!--STORES ALL CONTENT OF APP-->
+            <ion-header> <!--CABECERA-->
+                <ion-toolbar color="secondary"> <!--ESTILIZA LA CABECERA COMO CABECERA/TELÉFONO-->
+                    <ion-buttons slot="start"> <!--ALMACENA BOTONES-->
+                        <ion-button><!--DECLARACIÓN DE UN BOTON-->
+                            <ion-icon name="logo-ionic"></ion-icon> <!--ICON-->
+                        </ion-button>
+                    </ion-buttons>
+                    <ion-title>Ionic app</ion-title>
+                    <ion-buttons slot="end"> <!--'slot' otorga al botón y al texto estar acomodados-->
+                        <ion-button><!--DECLARACIÓN DE UN BOTON-->
+                            <p style="margin-right: 2.5em;">TOTAL: 30$</p>
+                            <ion-icon name="cart-outline"></ion-icon> <!--ICON-->
+                        </ion-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+
+            <ion-content>
+                <ion-grid><!--ESPACIOS PARA ALMACENAR-->
+                    <ion-row>
+                        <ion-col>
+                            <ion-card>
+                                <ion-card-header color="primary"><!--HEADER-->
+                                    <ion-card-title>Product</ion-card-title>
+                                </ion-card-header>
+                                <ion-card-content><!--BODY-->
+                                    <ion-item class="ion-margin-vertical"> <!--Espacio entre HEADER AND BODY--> <!--Elementos que pueden almacenar texto, imágenes, avatar, etc-->
+                                        <ion-label position="floating">Product name</ion-label> <!--'position="floating"' envia 'Product name' arriba del input cuando se ingresa el texto-->
+                                        <ion-input type="text"></ion-input>
+                                    </ion-item>
+                                    <ion-item> 
+                                        <ion-label position="floating">Product price</ion-label> 
+                                        <ion-input type="number"></ion-input>
+                                    </ion-item>
+                                    <ion-button class="ion-margin-vertical"><ion-icon name="navigate-outline" slot="start"></ion-icon>save</ion-button>
+                                    <ion-button fill="outline" color="danger"><ion-icon name="trash-outline" slot="start"></ion-icon>reset</ion-button>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                <ion-grid>
+            </ion-content>
+        </ion-app>
+    
+        <!--IONIC'S LOGIC-->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    </body>
+</html>
