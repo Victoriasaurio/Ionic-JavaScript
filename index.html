@@ -18,7 +18,7 @@
                     <ion-title>Ionic app</ion-title>
                     <ion-buttons slot="end"> <!--'slot' otorga al botón y al texto estar acomodados-->
                         <ion-button><!--DECLARACIÓN DE UN BOTON-->
-                            <p style="margin-right: 2.5em;">TOTAL: 30$</p>
+                            <p style="margin-right: 2.5em;">TOTAL: <span id="total">0</span>$</p>
                             <ion-icon name="cart-outline"></ion-icon> <!--ICON-->
                         </ion-button>
                     </ion-buttons>
@@ -28,7 +28,7 @@
             <ion-content>
                 <ion-grid><!--ESPACIOS PARA ALMACENAR-->
                     <ion-row>
-                        <ion-col>
+                        <ion-col size-md="4" offset-md="4"><!--offset-md centra card cuando se encuentre en tamañ mediano-->
                             <ion-card>
                                 <ion-card-header color="primary"><!--HEADER-->
                                     <ion-card-title>Product</ion-card-title>
@@ -49,7 +49,7 @@
                         </ion-col>
                     </ion-row>
                     <ion-row> <!--CARD NEW-PRODUTS--> <!--size=12 Tamaño máximo-->
-                        <ion-col>
+                        <ion-col size-md="4" offset-md="4">
                             <ion-list id="product"></ion-list>
                         <ion-card-content>
                     </ion-row>
