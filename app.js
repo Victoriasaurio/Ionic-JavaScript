@@ -3,6 +3,9 @@ const productPrice = document.querySelector('#product-price');
 const btnSave = document.querySelector('#btn-save');
 const btnReset = document.querySelector('#btn-reset');
 
+const totalOut = document.querySelector('#total');
+let total = 0;
+
 //ION-LIST
 const product = document.querySelector('#product');
 
@@ -51,6 +54,8 @@ btnSave.addEventListener('click', e => {
     }
 
     createProduct(name, price);
+    total += +price; //'+price' hace referencia a la conversión de un string a número y la suma del mismo
+    totalOut.textContent = total; //Muestra en pantalla el total
     clearInputs();
 });
 
