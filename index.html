@@ -36,17 +36,22 @@
                                 <ion-card-content><!--BODY-->
                                     <ion-item class="ion-margin-vertical"> <!--Espacio entre HEADER AND BODY--> <!--Elementos que pueden almacenar texto, imágenes, avatar, etc-->
                                         <ion-label position="floating">Product name</ion-label> <!--'position="floating"' envia 'Product name' arriba del input cuando se ingresa el texto-->
-                                        <ion-input type="text"></ion-input>
+                                        <ion-input id="product-name" type="text"></ion-input>
                                     </ion-item>
                                     <ion-item> 
                                         <ion-label position="floating">Product price</ion-label> 
-                                        <ion-input type="number"></ion-input>
+                                        <ion-input id="product-price" type="number"></ion-input>
                                     </ion-item>
-                                    <ion-button class="ion-margin-vertical"><ion-icon name="navigate-outline" slot="start"></ion-icon>save</ion-button>
-                                    <ion-button fill="outline" color="danger"><ion-icon name="trash-outline" slot="start"></ion-icon>reset</ion-button>
+                                    <ion-button id="btn-save" class="ion-margin-vertical"><ion-icon name="navigate-outline" slot="start"></ion-icon>save</ion-button>
+                                    <ion-button id="btn-reset" fill="outline" color="danger"><ion-icon name="trash-outline" slot="start"></ion-icon>reset</ion-button>
                                 </ion-card-content>
                             </ion-card>
                         </ion-col>
+                    </ion-row>
+                    <ion-row> <!--CARD NEW-PRODUTS--> <!--size=12 Tamaño máximo-->
+                        <ion-col>
+                            <ion-list id="product"></ion-list>
+                        <ion-card-content>
                     </ion-row>
                 <ion-grid>
             </ion-content>
@@ -55,5 +60,7 @@
         <!--IONIC'S LOGIC-->
         <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
         <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+        <!--CONEXION APP.JS-->
+        <script src="app.js"></script>
     </body>
 </html>
